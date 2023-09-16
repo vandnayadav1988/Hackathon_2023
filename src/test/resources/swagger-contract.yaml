@@ -1,0 +1,479 @@
+swagger: '2.0'
+info:
+  description: 'Api Documentation'
+  version: '1.0'
+  title: 'Api Documentation'
+  termsOfService: 'urn:tos'
+  contact:
+    name: 'Contact Email'
+  license:
+    name: 'Apache 2.0'
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+#host: 'localhost:8080'
+basePath: /
+tags:
+  -
+    name: basic-error-controller
+    description: 'Basic Error Controller'
+  -
+    name: current-date-controller
+    description: 'Current Date Controller'
+paths:
+  /error:
+    get:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+        '500':
+          description: '500 message'
+          responseSchema:
+            $ref: '#/definitions/Error'
+            originalRef: Error
+          schema:
+            $ref: '#/definitions/Error'
+            originalRef: Error
+      deprecated: false
+    head:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingHEAD
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+      deprecated: false
+    post:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+      deprecated: false
+    put:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingPUT
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+      deprecated: false
+    delete:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingDELETE
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+      deprecated: false
+    options:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingOPTIONS
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+      deprecated: false
+    patch:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingPATCH
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+      deprecated: false
+  '/currentdate/{pattern}':
+    get:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+        '500':
+          description: '500 message'
+          responseSchema:
+            $ref: '#/definitions/Error'
+            originalRef: Error
+          schema:
+            $ref: '#/definitions/Error'
+            originalRef: Error
+      deprecated: false
+    head:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingHEAD
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+      deprecated: false
+    post:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+      deprecated: false
+    put:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingPUT
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+      deprecated: false
+    delete:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingDELETE
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+      deprecated: false
+    options:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingOPTIONS
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+      deprecated: false
+    patch:
+      tags:
+        - current-date-controller
+      summary: formatCurrentDate
+      operationId: formatCurrentDateUsingPATCH
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        -
+          name: pattern
+          in: path
+          description: pattern
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+          schema:
+            $ref: '#/definitions/FormattedDate'
+            originalRef: FormattedDate
+      deprecated: false
+securityDefinitions:
+  mykey:
+    type: apiKey
+    name: mykey
+    in: header
+definitions:
+  FormattedDate:
+    properties:
+      date:
+        type: string
+      id:
+        type: integer
+        format: int64
+      pattern:
+        type: string
+  ModelMap:
+    type: object
+    additionalProperties:
+      type: object
+  ModelAndView:
+    properties:
+      empty:
+        type: boolean
+      model:
+        type: object
+        additionalProperties:
+          type: object
+      modelMap:
+        type: object
+        additionalProperties:
+          type: object
+      reference:
+        type: boolean
+      status:
+        type: string
+        enum:
+          - '100'
+          - '101'
+          - '102'
+          - '103'
+          - '200'
+          - '201'
+          - '202'
+          - '203'
+          - '204'
+          - '205'
+          - '206'
+          - '207'
+          - '208'
+          - '226'
+          - '300'
+          - '301'
+          - '302'
+          - '302'
+          - '303'
+          - '304'
+          - '305'
+          - '307'
+          - '308'
+          - '400'
+          - '401'
+          - '402'
+          - '403'
+          - '404'
+          - '405'
+          - '406'
+          - '407'
+          - '408'
+          - '409'
+          - '410'
+          - '411'
+          - '412'
+          - '413'
+          - '413'
+          - '414'
+          - '414'
+          - '415'
+          - '416'
+          - '417'
+          - '418'
+          - '419'
+          - '420'
+          - '421'
+          - '422'
+          - '423'
+          - '424'
+          - '426'
+          - '428'
+          - '429'
+          - '431'
+          - '451'
+          - '500'
+          - '501'
+          - '502'
+          - '503'
+          - '504'
+          - '505'
+          - '506'
+          - '507'
+          - '508'
+          - '509'
+          - '510'
+          - '511'
+      view:
+        type: object
+      viewName:
+        type: string
+  View:
+    properties:
+      contentType:
+        type: string
