@@ -3,13 +3,8 @@ info:
   description: 'Api Documentation'
   version: '1.0'
   title: 'Api Documentation'
-  termsOfService: 'urn:tos'
   contact:
     name: 'Contact Email'
-  license:
-    name: 'Apache 2.0'
-    url: 'http://www.apache.org/licenses/LICENSE-2.0'
-#host: 'localhost:8080'
 basePath: /
 tags:
   -
@@ -19,7 +14,6 @@ tags:
     name: current-date-controller
     description: 'Current Date Controller'
 paths:
-  
   /error:
     get:
       tags:
@@ -50,8 +44,6 @@ paths:
             $ref: '#/definitions/Error'
             originalRef: Error
       deprecated: false
-  
-      
       
   '/currentdate/{pattern}':
     get:
