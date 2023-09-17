@@ -28,7 +28,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -57,7 +57,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -78,7 +78,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -99,7 +99,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -120,7 +120,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -141,7 +141,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -162,7 +162,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       responses:
         '200':
           description: OK
@@ -184,7 +184,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
@@ -218,7 +218,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
@@ -244,7 +244,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
@@ -270,7 +270,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
@@ -296,7 +296,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
@@ -322,7 +322,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
@@ -348,7 +348,7 @@ paths:
       consumes:
         - application/json
       produces:
-        - 'text/html'
+        - '*/*'
       parameters:
         -
           name: pattern
