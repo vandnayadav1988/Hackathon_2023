@@ -19,6 +19,40 @@ tags:
     name: current-date-controller
     description: 'Current Date Controller'
 paths:
+  
+  /error:
+    get:
+      tags:
+        - basic-error-controller
+      summary: error
+      operationId: errorUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      responses:
+        '200':
+          description: OK
+          responseSchema:
+            type: object
+            additionalProperties:
+              type: object
+          schema:
+            type: object
+            additionalProperties:
+              type: object
+        '500':
+          description: '500 message'
+          responseSchema:
+            $ref: '#/definitions/Error'
+            originalRef: Error
+          schema:
+            $ref: '#/definitions/Error'
+            originalRef: Error
+      deprecated: false
+  
+      
+      
   '/currentdate/{pattern}':
     get:
       tags:
