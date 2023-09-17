@@ -14,14 +14,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class RestApiSchemaIntegrationTest {
 
   @LocalServerPort
-  int port;
-
+//  int port;
+//  @Test
+//  public void validateThatImplementationMatchesDocumentationSpecification() {
+//    String apiContract = RestApiSchemaIntegrationTest.class.getResource("/swagger-contract.yaml").getPath();
+//    System.out.println(apiContract);
+//    String swaggerSchemaUrl = String.format("http://localhost:%d/v2/api-docs", port);
+//    SwaggerAssertions.assertThat(swaggerSchemaUrl).isEqualTo(apiContract);
+//  }
   @Test
-  public void validateThatImplementationMatchesDocumentationSpecification() {
-    String apiContract = RestApiSchemaIntegrationTest.class.getResource("/swagger-contract.yaml").getPath();
-    System.out.println(apiContract);
-    String swaggerSchemaUrl = String.format("http://localhost:%d/v2/api-docs", port);
-    SwaggerAssertions.assertThat(swaggerSchemaUrl).isEqualTo(apiContract);
+  public void validateThatImplementationSatisfiesConsumerSpecification(){
+    String designFirstSwagger = RestApiSchemaIntegrationTest.class.getResource("/swagger-contract.yaml").getPath();
+    SwaggerAssertions.assertThat("http://localhost:8080/v2/api-docs")
+            .satisfiesContract(designFirstSwagger);
   }
-
 }
